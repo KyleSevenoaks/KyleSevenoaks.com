@@ -1,0 +1,18 @@
+<section id="header">
+	<header>
+		<hgroup>
+			<h1 id="the-header">Kyle Sevenoaks</h1>
+			<p>It's all about me.</p>
+		</hgroup>
+		<button id="mobile-menu">Menu</button>
+		<nav>
+			<ul>
+				<li><a href="">About Me</a></li>
+				<li><a href="">Projects</a></li>
+				<li><a href="">Stuff</a></li>
+				<li><a href="">Contact</a></li>
+			</ul>
+		</nav>
+		<span class="clear"></span>
+	</header>
+</section>

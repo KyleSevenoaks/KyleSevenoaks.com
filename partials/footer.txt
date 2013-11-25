@@ -1,0 +1,8 @@
+<section id="footer">
+	<footer>
+		<p>
+			All this made by Kyle Sevenoaks. <a href="#">Why not contact me?</a>  :)
+		</p>
+	</footer>
+</section>
+<script src="js/scripts.js" type="text/javascript" charset="utf-8"></script>

@@ -1,0 +1,159 @@
+@import "typography.less";
+@import: "variables.less";
+
+body{
+  background: #000 url(../assets/skyscraper_bg.jpg) no-repeat;
+  background-size: 100%;
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  #header {
+    background: @black-bg;
+    color: @white;
+    margin-top: 0;
+    padding: 1em;
+    
+    #the-header {
+      cursor: pointer;
+    }
+    
+    button#mobile-menu {
+        display: none;
+      }
+    
+    hgroup, nav {
+      float: left;
+      width: 50%;
+      transition: all 1s ease;
+      
+      &.animate-right {
+        margin-left: -5em;
+         margin-right: 5em;
+        opacity: 0;
+      }
+      
+      &.animate-left {
+        margin-left: 5em;
+         margin-right: -5em;
+        opacity: 0;
+      }
+
+    }
+    
+    ul {
+      width: 100%;
+      padding: 0;
+      display: table;
+      
+      li {
+         width: 25%;
+         display: table-cell;
+         text-align: center;
+       }
+       
+       a {
+         display: block;
+         height: 100%;
+         width: 100%;
+       }
+       
+       :hover {
+         background: @anchor-color;
+         
+         a {
+           color: @white;
+         }
+       }
+    }
+  }
+  
+  #footer {
+    background: @black-bg;
+    color: @white;
+    padding: 1em;
+    
+    p {
+      float: left;
+      width: 50%;
+    }
+    
+    p:nth-child(2) {
+        text-align: right;
+    }
+    
+  }
+}
+
+section:not(.the-bacon) {
+  width: 100%;
+  margin-top: @margin;
+  transition: all 1s ease;
+  
+  &.animate-o {
+        opacity: 0;
+      }
+  
+  header, footer {
+    width: 60em;
+    margin: 0 auto;
+  }
+  
+  .inner {
+    width: 60em;
+    margin: 0 auto;
+    background: @black-bg;
+    color: @white;
+    padding: 1em;
+  }
+  
+  article {
+    
+    margin: 0 0 2em 0;
+    transition: all .2s ease;
+    float: left;
+    width: 70%;
+    
+    &.projects {
+      float: left;
+      width: 50%;
+      height: 10em;
+      padding: 1em;
+    }
+    
+    &.css3slider:hover,
+    &.resolicious:hover {
+      background: @hover-color;
+      color: @black;
+      cursor: pointer;
+    }
+    
+    h2 {
+      font-size: 1.5em;
+      color: @header-color;
+    }
+    
+     p {
+      margin-top: 1em;
+    }
+  }
+  
+  aside {
+    height: 100%;
+    float: right;
+    width: 30%;
+    padding: 0 1em;
+    
+    h3 {
+      font-size: 1.2em;
+      color: @header-color;
+    }
+    
+    p {
+      margin-top: 1em;
+    }
+  }
+}
+
+@import "mobile.less";

@@ -1,0 +1,140 @@
+@import "typography.less";
+@import: "variables.less";
+
+@media all and (max-width: 699px) {
+
+
+  html {
+    width: 100%;
+  }
+  body{
+    background: #000 url(../assets/skyscraper_bg.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    width: 100%;
+    
+    * {
+      box-sizing: border-box;
+      transition: @transition;
+    }
+    
+    #header {
+      background: @black-bg;
+      color: @white;
+      margin-top: 0;
+      padding: 1em;
+      text-align: center;
+      
+      hgroup {
+        float: none;
+        width: 100%;
+      }
+      
+      button#mobile-menu {
+        display: block;
+        width: 70%;
+        margin: 1em auto 0 auto;
+        background: rgba(117, 117, 117, .8);
+        border: 0;
+        color: @white;
+        padding: 0.5em;
+        font-size: 1em;
+        outline: 0;
+        
+        &:hover,
+        &:active {
+          background: @hover-color;
+          color: @black;
+        }
+      }
+      
+      nav {
+        position: fixed;
+        z-index: 99999;
+        top: 0;
+        left: -100%;
+        width: 40%;
+        height: 100%;
+        background: rgba(0, 0, 0, .9);
+        
+        &.active {
+          left: 0;
+        }
+      }
+      
+
+      ul {
+        width: 100%;
+        padding: 0;
+        
+        li {
+           width: 100%;
+           text-align: left;
+           display: block;
+           height: 2em;
+           line-height: 2em;
+         }
+         
+         a {
+           display: block;
+           height: 100%;
+           width: 100%;
+           padding-left: 1em;
+         }
+         
+         :hover {
+           background: @anchor-color;
+           
+           a {
+             color: @white;
+           }
+         }
+      }
+    }
+    
+    #footer {
+      background: @black-bg;
+      color: @white;
+      padding: 1em;
+    }
+  }
+  
+  section:not(.the-bacon) {
+    width: 100%;
+    margin-top: @margin;
+    
+    header, footer {
+      width: 100%;
+      margin: 0 auto;
+    }
+    
+    .inner {
+      width: 100%;
+      background: @black-bg;
+      color: @white;
+      padding: 1em;
+    }
+    
+    article {
+      
+      margin: 0 0 2em 0;
+      
+      h2 {
+        font-size: 1.5em;
+        color: @header-color;
+      }
+      
+       p {
+        margin-top: 1em;
+      }
+    }
+    
+   
+  }
+  
+  #footer, .push {
+    height: 5em;
+  }
+}
+
+
