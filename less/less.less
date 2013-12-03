@@ -6,6 +6,7 @@ body{
   background-size: 100%;
   
   * {
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
   
@@ -30,13 +31,17 @@ body{
       
       &.animate-right {
         margin-left: -5em;
-         margin-right: 5em;
+        margin-right: 5em;
         opacity: 0;
       }
       
       &.animate-left {
         margin-left: 5em;
-         margin-right: -5em;
+        margin-right: -5em;
+        opacity: 0;
+      }
+      
+      &.animate-o {
         opacity: 0;
       }
 
@@ -105,15 +110,16 @@ section:not(.the-bacon) {
     margin: 0 auto;
     background: @black-bg;
     color: @white;
-    padding: 1em;
+    padding: 1em; 
   }
   
   article {
     
-    margin: 0 0 2em 0;
+    margin: 0 0 1em 0;
     transition: all .2s ease;
     float: left;
     width: 70%;
+    padding: 1em;
     
     &.projects {
       float: left;
@@ -122,8 +128,7 @@ section:not(.the-bacon) {
       padding: 1em;
     }
     
-    &.css3slider:hover,
-    &.resolicious:hover {
+    &.link:hover {
       background: @hover-color;
       color: @black;
       cursor: pointer;
@@ -150,8 +155,37 @@ section:not(.the-bacon) {
       color: @header-color;
     }
     
-    p {
+    p, figure {
       margin-top: 1em;
+      border: 0 solid rgba(177, 177, 177, .4);
+      border-left-width: 0.1em;
+      
+      .svg.html5,
+      .svg.css3 {
+        width: 50%;
+        transition: all 1s ease;
+        margin: 0 0 0 4.5em;
+        height: 200px;
+      }
+      
+      .svg.jquery {
+        width: 90%;
+        height: 4em;
+        margin: 0 0 0 1em;
+      }
+      
+      figcaption {
+        text-align: center;
+        font-style: italic;
+      }
+    }
+    
+    figure {
+      border: 0;
+    }
+    
+    img {
+      width: 100%;
     }
   }
 }

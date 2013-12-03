@@ -112,13 +112,14 @@
       width: 100%;
       background: @black-bg;
       color: @white;
-      padding: 1em;
+      padding: 0;
     }
     
     article {
       
       margin: 0 0 2em 0;
-      
+      float: none;
+      width: 100%;
       h2 {
         font-size: 1.5em;
         color: @header-color;
@@ -127,14 +128,80 @@
        p {
         margin-top: 1em;
       }
+      
+      &.projects {
+      float: none;
+      width: 100%;
+      height: auto;
+      padding: 1em;
     }
     
-   
+    &.link:hover {
+      background: @hover-color;
+      color: @black;
+      cursor: pointer;
+    }
+    }
+
   }
   
   #footer, .push {
     height: 5em;
   }
+  
+  body #footer {
+    display: none;
+    p {
+      float: none;
+      width: 100%;
+    }
+  }
 }
 
+section:not(.the-bacon){
 
+  aside {
+    height: 100%;
+    float: none;
+    width: 30%;
+    padding: 0 1em;
+    
+    &.index-aside {
+      display: none;
+    }
+    h3 {
+      font-size: 1.2em;
+      color: @header-color;
+    }
+        
+    p, figure {
+      margin-top: 1em;
+      border: 0;
+      
+      .svg.html5,
+      .svg.css3,
+      .svg.jquery {
+        display: none;
+        width: 0;
+        height: 0;
+      }
+      
+      img {
+        displaY: none;
+      }
+      
+      figcaption {
+        display: none;
+      }
+    }
+    
+    figure {
+      width: 100%;
+      float: none;
+    }
+    
+    img {
+      width: 100%;
+    }
+  }
+}
